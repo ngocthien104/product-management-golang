@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202a3b;
+  background: #f4f6fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+.page { max-width: 1180px; margin: 0 auto; padding: 42px 24px 24px; }
+.hero { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
+.eyebrow { margin: 0 0 8px; color: #5573c7; font-size: 11px; font-weight: 800; letter-spacing: 1.7px; }
+h1, h2 { font-family: Manrope, sans-serif; margin: 0; letter-spacing: -0.7px; }
+h1 { font-size: clamp(30px, 4vw, 42px); }
+h2 { font-size: 21px; }
+.subtitle { color: #7a8495; margin: 10px 0 0; }
+.count-card { min-width: 170px; background: #fff; border: 1px solid #e5e9f2; padding: 18px 22px; border-radius: 16px; box-shadow: 0 8px 24px #293d6810; }
+.count-card span { display: block; color: #7a8495; font-size: 12px; max-width: 150px; }
+.count-card strong { display: block; font-family: Manrope, sans-serif; font-size: 32px; margin-top: 5px; }
+.panel { background: #fff; border: 1px solid #e5e9f2; border-radius: 18px; padding: 26px; margin-bottom: 22px; box-shadow: 0 8px 28px #293d6808; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.product-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+label { display: flex; flex-direction: column; gap: 8px; color: #4c5669; font-size: 13px; font-weight: 700; }
+input, select, textarea { width: 100%; border: 1px solid #dfe4ee; border-radius: 9px; background: #fff; color: #202a3b; padding: 11px 12px; outline: none; font-size: 14px; font-weight: 400; transition: border .15s, box-shadow .15s; }
+input:focus, select:focus, textarea:focus { border-color: #6b86db; box-shadow: 0 0 0 3px #6b86db20; }
+textarea { resize: vertical; }
+.full { grid-column: 1 / -1; }
+.slug-row { display: flex; gap: 8px; }
+.slug-row input { min-width: 0; }
+.button { cursor: pointer; border: 0; border-radius: 8px; padding: 10px 15px; font-size: 13px; font-weight: 700; white-space: nowrap; transition: transform .15s, opacity .15s; }
+.button:hover { transform: translateY(-1px); }
+.primary { color: #fff; background: #4e6dc5; }
+.secondary { color: #455574; background: #edf1f8; }
+.danger { color: #b52d42; background: #fff0f2; }
+.small { padding: 7px 10px; font-size: 12px; }
+.form-actions, .actions { display: flex; align-items: center; gap: 8px; }
+.filters { display: grid; grid-template-columns: 1fr 220px; gap: 16px; margin-bottom: 18px; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; text-align: left; font-size: 13px; }
+th { color: #7b8596; background: #f8f9fc; font-size: 11px; text-transform: uppercase; letter-spacing: .7px; font-weight: 800; }
+th, td { padding: 14px 12px; border-bottom: 1px solid #edf0f5; }
+tbody tr:last-child td { border-bottom: 0; }
+.product-name { font-weight: 700; color: #283449; margin-bottom: 4px; }
+.description { max-width: 260px; color: #8791a1; font-size: 12px; line-height: 1.5; }
+.category-tag { display: inline-block; background: #eef2ff; color: #536db4; padding: 5px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+.price { font-weight: 800; white-space: nowrap; }
+code { font-size: 12px; color: #64718a; }
+.empty { text-align: center; color: #7d8798; padding: 30px 12px; font-size: 14px; }
+.alert { padding: 12px 15px; border-radius: 10px; margin-bottom: 16px; font-size: 14px; }
+.error { color: #a62e40; background: #fff0f2; border: 1px solid #ffd9df; }
+.success { color: #216b4b; background: #eaf8f0; border: 1px solid #cceedd; }
+footer { text-align: center; color: #9aa2b0; font-size: 12px; padding: 12px 0 20px; }
+@media (max-width: 760px) {
+  .page { padding: 24px 14px; }
+  .hero { align-items: flex-start; flex-direction: column; }
+  .count-card { width: 100%; }
+  .panel { padding: 18px 14px; }
+  .product-form, .filters { grid-template-columns: 1fr; }
+  .full { grid-column: auto; }
+  .section-heading { align-items: flex-start; }
+  .section-heading .button { white-space: normal; }
+}
